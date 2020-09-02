@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehension</title>
+    <style>
+        body {
+            font-family: papyrus;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+/* Understanding the "for"-loop */
+
+for (i = 1; i <= 6; i++) {
+    if (i === 2 || i === 4 || i === 6) {
+        document.write("The number " + i + " is even.<br>");
+    } else {
+        document.write("The number " + i + " is odd.<br>");
+    }
+};
+    </script>
+        <br>            
+    <script>
+        var name = "Joe";
+        var i = 0;
+
+        while (i < 2) {
+            document.write("Happy Birthday to you.<br>");
+            i++;
+        }
+        document.write("Happy Birthday dear " + name + ".<br>")
+        document.write("Happy Birthday to you.<br><br>")
+
+
+        var clowns = 5;
+        for (i = 5; i >= 1; i--) {
+            if (clowns > 1) {
+                document.write(clowns + " Clowns are chasing you. Kill one of them!<br>");
+                clowns--;
+                document.write("You killed one clown with your shotgun. " + clowns + " left!<br>");
+                
+            } else {
+                document.write("All clowns are dead :(.<br><br>");
+            }
+        };
+
+    function animalVoices(petName, animal, weight) {
+        if (animal === "dog" && weight > 20 ) {
+            document.write(petName + " says WOOF WOOF!<br>");
+        } else if (animal === "dog" && weight < 20) {
+            document.write(petName + " says Woof Woof!<br>");
+        } else if (animal === "cat" && weight > 20) {
+            document.write(petName + " says ROAR!<br>");
+        } else if (animal === "cat" && weight < 20) {
+            document.write(petName + " says Meow!<br>")
+        } else {
+            document.write(petName + " is not a living pet.<br>");
+        }
+    };
+
+    animalVoices("Doggo", "dog", 21);
+    animalVoices("Doge", "dog", 15);
+    animalVoices("Baboo", "cat", 30);
+    animalVoices("Grumpy Cat", "cat", 15);
+    animalVoices("Furby", "toy", 0.5);
+
+
+    function whatShallIwear(temp) {
+        if (temp < 60) {
+            document.write("<br>Wear a jacket.<br>");
+        } else if (temp < 70) {
+            document.write("Wear a sweater.<br>");
+        } else {
+            document.write("Wear a T-shirt.<br>");
+        }
+    };
+    document.write("<br>");
+    whatShallIwear(50);
+    whatShallIwear(60);
+    whatShallIwear(70);
+    whatShallIwear(80);
+    whatShallIwear(90);
+
+    var num1 = 1
+    var result
+    function simpleMath() {
+        result = num1 + 2;
+    }
+    simpleMath(num1);
+    document.write("<br>");
+    document.write(num1 + " + 2 equals "+ result + ".<br>" );
+    document.write("<br>");
+        
+        function bake(degrees) {
+            var message
+            if (degrees > 500) {
+                message = "I'm not a nuclear reactor!<br>";
+            } else if (degrees < 100) {
+                message = "I'm not a refrigerator<br>";
+            } else {
+                message = "The cookies are baking well<br>";
+            }
+            return message;
+        }
+
+        var status = bake(600);
+        document.write(status);
+        var status = bake(400);
+        document.write(status);
+
+        function dogSounds(petName, weight) {
+            var sound;
+            if (weight > 20) {
+                sound = petName + " says WOOF WOOF.<br>";
+            } else {
+                sound = petName + " says meow.<br>";
+            }
+            return sound;
+        }
+
+        document.write("<br>" + dogSounds("Barky", 30));
+        document.write(dogSounds("Fluffy", 20));
+
+        function calculateCircleArea(radius) {
+            var area;
+            if (radius <= 0) {
+                area = 0;
+                return "The circular area is " + area + "<br>";
+            } else {
+                area = Math.PI*radius*radius;
+                return "The circular area is " + area + "<br>";
+            }
+        }
+
+        document.write(calculateCircleArea(0));
+        document.write(calculateCircleArea(10));
+
+        var ingredients = ["soy sauce", "rice", "ginger", "peanut butter", "sesame oil", "Pak Choi", "Bell Pepper"];
+
+        function list() {
+            for (var i = 0; i < ingredients.length; i++) {
+                var listItem = ingredients[i];
+                document.write(i+1 + ". " + listItem + "<br>");
+            }
+        }
+
+        document.write("<br><u>Shopping List</u><br>")
+        list();
+
+        var products = ["Choo Choo Chocolate", "Icy Mint", "Cake Batter", "Bubblegum"];
+        var hasBubbleGum = [false, false, false, true];
+
+        document.write("<br><u>Ice cream with Bubble Gum Flavour</u>: <br>");
+            for (i = 0; i < hasBubbleGum.length; i++) {
+                if (hasBubbleGum[i] === true) {
+                    document.write(i+1 + ". " + products[i] + " contains Bubble Gum.<br>");
+                } else {
+                    document.write(i+1 + ". " + products[i] +  " has no Bubble Gum.<br>");
+                }
+            }
+
+        var scores = [60, 50, 60, 58, 54, 54, 
+                      58, 50, 52, 54, 48, 69,
+                      34, 55, 51, 52, 44, 51,
+                      69, 64, 66, 55, 52, 61,
+                      46, 31, 57, 52, 44, 18,
+                      41, 53, 55, 70, 51, 44];
+
+        var highScore = 0;
+        var output; 
+        for (var i = 0; i < scores.length; i++) {
+            output = "Score for Try #" + i+1 + " is: " + scores[i] + " Points.<br>";
+            document.write(output);
+            if (scores[i] > highScore) {
+                highScore = scores[i];
+            }
+        }
+        document.write("Tries: " + scores.length + "<br>");
+        document.write("Highest score: " + highScore);
+
+    </script>
+
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehension #2</title>
+</head>
+<body>
+    <h1>Understanding objects in combination with functions</h1>
+    <script>
+        var dog1 = {
+            name: "Barky",
+            species: "dog",
+            breed: "labrador",
+            weight: 20
+        };
+        var dog2 = {
+            name: "Bello",
+            species: "dog",
+            breed: "mixed",
+            weight: 30
+        };
+
+        var cat1 = {
+            name: "Baboo",
+            species: "cat",
+            breed: "ocelot",
+            weight: 60
+        };
+        var cat2 = {
+            name: "Kitty",
+            species: "cat",
+            breed: "egypt",
+            weight: 15
+        };
+        var toy1 = {
+            name: "Furby",
+            species: "toy",
+            breed: "Hasbro",
+            weight: 1
+        };
+        var toy2 = {
+            name: "Pikachu",
+            species: "toy",
+            breed: "Nintendo",
+            weight: 0.5
+        };
+        var cat3 = {
+            name: "Tardar Sauce",
+            species: "cat",
+            breed: "Reddit",
+            weight: 1
+        };
+        var dog3 = {
+            name: "Spunky",
+            species: "dog",
+            breed: "mops",
+            weight: 3
+        };
+
+
+        var animals = [dog1, dog2, dog3, cat1, cat2, cat3, toy1, toy2];
+
+        for (var i = 0; i < animals.length; i++) {
+            if (animals[i].species === "dog") {
+                if (animals[i].breed === "labrador") {
+                    document.write(animals[i].name + " is a good boy.<br>");
+                } else if (animals[i].breed === "mixed") {
+                    document.write(animals[i].name + " has a very quirky nature.<br>");
+                } else {
+                    document.write(animals[i].name + " is a " + animals[i].breed + " dog with unkown nature.<br>");
+                }
+            } else if (animals[i].species === "cat") {
+                if (animals[i].breed === "ocelot") {
+                        document.write("You should not hold " + animals[i].name + " in your living room.<br>");
+                } else if (animals[i].breed === "Reddit") {
+                    document.write(animals[i].name + " is Grumpy Cat from " + animals[i].breed + ".<br>");
+                } else {
+                        document.write(animals[i].name + " is a cat.<br>");
+                    }
+                }
+            };
+    
+/*
+function animalVoice() {
+    for (var i = 0; i < animals.length; i++) {
+        if (animals[i].species === "dog") {
+            if (breed === "labrador") {
+                document.write(animals[i].name + " is a nice boy.<br>");
+            } else if (breed === "mixed") {
+                document.write(animals[i].name + " has a very quirky nature.<br>");
+            }
+        }
+        if (animals[i].species === "cat") {
+            if (breed === "ocelot") {
+                document.write("You should not hold " + animals[i].name + " as a pet in your living room.<br>");
+            } else {
+                document.write(animals.name[i] + " is not a living pet.<br>");
+            }
+        }
+
+        }
+    };
+
+animalVoice(animals);
+*/
+
+    </script>
+
+</body>
+</html>
